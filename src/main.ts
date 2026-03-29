@@ -7,9 +7,9 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
   app.enableCors(); // ✅ allow all origins
   const port = process.env.PORT ?? 5000;
-  await app.listen(port);
+  await app.listen(port, '0.0.0.0');
   Logger.log(
-    `🚀 Application is running on: http://localhost:${port}`,
+    `🚀 Application is running on: https://sample-api-9nzo.onrender.com`,
     'Bootstrap',
   );
 }
